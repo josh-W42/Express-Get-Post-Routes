@@ -1,4 +1,9 @@
 <h2>Here's My Dinosaurs</h2>
+<form method="GET" action="/dinosaurs">
+    <label for="nameFilter">Filter By Name</label>
+    <input id="nameFilter" name="nameFilter" type="text"/>
+    <input type="submit" value="search"/>
+</form>
 <ul>
     <% dinos.forEach(dino => { %>
         <li>

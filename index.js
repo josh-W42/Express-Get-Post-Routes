@@ -21,6 +21,13 @@ app.get('/dinosaurs', (req, res) => {
     // Access the database
     let dinos = fs.readFileSync(`${__dirname}/dinosaurs.json`);
     dinos = JSON.parse(dinos);
+    
+    if (Object.keys(req.query).length != 0) {
+        let dinoID = req.query.nameFilter;
+        let dino = dinos.filter((dino) => dino.name.toLowerCase() === dinoID.toLowerCase())[0];
+
+        res.render(`dinosaurs/show.ejs`, { dino });
+    }
 
     // Render the basic dino page with dino array.
     res.render(`dinosaurs/index.ejs`, { dinos });
@@ -32,15 +39,13 @@ app.get('/dinosaurs/new', (req, res) => {
 });
 
 app.get('/dinosaurs/:id', (req, res) => {
-    let dinoID = parseInt(req.params.id);
-
     // Read from Database
     let dinos = fs.readFileSync(`${__dirname}/dinosaurs.json`);
     dinos = JSON.parse(dinos);
 
-    // Retrive a dino
-    let dino = dinos[dinoID];
-
+    let dinoID = req.params.id;
+    dino = dinos[dinoID];
+    
     // Show a dino.
     res.render(`dinosaurs/show.ejs`, { dino });
 });
