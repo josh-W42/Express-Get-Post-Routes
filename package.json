@@ -1,0 +1,25 @@
+{
+  "name": "Express-Get-Post-Routes",
+  "version": "1.0.0",
+  "description": "Some notes on using express with GET and POST http methods.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josh-W42/Express-Get-Post-Routes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josh-W42/Express-Get-Post-Routes/issues"
+  },
+  "homepage": "https://github.com/josh-W42/Express-Get-Post-Routes#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0"
+  }
+}
