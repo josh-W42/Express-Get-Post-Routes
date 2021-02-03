@@ -4,12 +4,18 @@
     <input id="nameFilter" name="nameFilter" type="text"/>
     <input type="submit" value="search"/>
 </form>
+<form method="GET" action="/dinosaurs/new">
+    <input value="MAKE NEW DINO" type="submit"/>
+</form>
 <ul>
     <% dinos.forEach((dino, index) => { %>
         <li>
             <div>
                 <p>Name: <%= dino.name %></p>
                 <p>Type: <%= dino.type %></p>
+                <form method="GET" action="/dinosaurs/edit/<%= index %>">
+                    <input type="submit" value="UPDATE"/>
+                </form>
                 <form method="POST" action="/dinosaurs/<%= index %>/?_method=DELETE">
                     <input type="submit" value="DELETE" />
                 </form>
