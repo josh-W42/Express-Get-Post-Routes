@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/josh-W42/Express-Get-Post-Routes#readme",
   "dependencies": {
-    "ejs": "^3.1.5",
-    "express": "^4.17.1",
+    "ejs": "^3.1.10",
+    "express": "^4.20.0",
     "express-ejs-layouts": "^2.5.0",
     "method-override": "^3.0.0"
   }
